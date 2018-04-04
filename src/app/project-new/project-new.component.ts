@@ -17,10 +17,11 @@ export class ProjectNewComponent implements OnInit {
   ngOnInit() {
   }
 
-  addProject(projectName: string, projectStarters: string, projectDescription: string, projectGoal: string, projectPlans: string, projectRewards: string) {
+  addProject(projectName: string, projectStarters: string, projectDescription: string, projectGoal: string, projectPlans: string, projectRewards: string, projectDate: string) {
     let starterArray = projectStarters.split(", ");
     let rewardsArray = projectRewards.split(", ");
-    this.projectsService.addProject(new Project(projectName, starterArray, projectDescription, parseInt(projectGoal), projectPlans, rewardsArray));
+    this.projectsService.addProject(new Project(projectName, starterArray, projectDescription, parseInt(projectGoal), projectPlans, rewardsArray, projectDate));
+    this.router.navigate(['/projects']);
   }
 
 }

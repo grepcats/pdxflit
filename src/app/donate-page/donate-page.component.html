@@ -1,5 +1,7 @@
 <h1>Donate to {{project?.name}}</h1>
-<h3>We have raised ${{project?.raised}} of our ${{project?.goal}} goal!</h3>
+
+<h3 *ngIf="project?.raised <= project?.goal">We have raised ${{project?.raised}} of our ${{project?.goal}} goal!</h3>
+<h3 *ngIf="project?.raised >= project?.goal">We have met our goal of ${{project?.goal}} and have surpassed it by ${{project?.raised-project?.goal}}</h3>
 <form class="donateForm">
   <h3>Amount to donate:</h3>
   <div class="input-group">

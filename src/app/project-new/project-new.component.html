@@ -8,6 +8,9 @@
     <textarea #newDescription type="text" class="form-control"></textarea>
   </div>
   <div class="form-group">
+    <label>Goal Date</label>
+    <input type="date" #newDate class="form-control">
+  <div class="form-group">
     <label>Starters/organizers for your project, separated by comma</label>
     <input #newStarters type="text" class="form-control">
   </div>
@@ -23,6 +26,6 @@
     <label>Rewards/swag, separated by commas</label>
     <input #newRewards class="form-control">
   </div>
-  <button class="btn btn-default" (click)="addProject(newName.value, newStarters.value, newDescription.value, newGoal.value, newPlans.value, newRewards.value)">Submit</button>
+  <button class="btn btn-default" (click)="addProject(newName.value, newStarters.value, newDescription.value, newGoal.value, newPlans.value, newRewards.value, newDate.value)">Submit</button>
 
 </div>
