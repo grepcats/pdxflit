@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { ProjectsService } from '../projects.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-new',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectNewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
