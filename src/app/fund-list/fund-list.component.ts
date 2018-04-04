@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { ProjectsService } from '../projects.service'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-fund-list',
@@ -9,12 +10,18 @@ import { ProjectsService } from '../projects.service'
   providers : [ProjectsService]
 })
 export class FundListComponent implements OnInit {
-  projects: FirebaseListObservable<any[]>;
-  constructor(private projectsService: ProjectsService) { }
+  projects;
+  constructor(private router: Router, private projectsService: ProjectsService) { }
 
+  goToDetailPage(clickedProject) {
+    this.router.navigate(['fund', clickedProject.$key])
+  }
   ngOnInit() {
-    this.projects = this.projectsService.getProjects();
     console.log(this.projects);
+    this.projectsService.getProjects().subscribe(dataLastEmittedFromObserver => {
+      this.projects = dataLastEmittedFromObserver;
+      console.log(this.projects);
+    })
   }
 
 }

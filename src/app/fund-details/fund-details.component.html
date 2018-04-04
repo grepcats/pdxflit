@@ -1,0 +1,6 @@
+<h1>{{(project | async)?.name}}</h1>
+<h3>{{(project | async)?.description}}</h3>
+<h5 *ngFor="let starter of (project | async)?.starters">{{starter}}</h5>
+<h5>{{(project | async)?.goal}}</h5>
+<h5></h5>
+<h5></h5>

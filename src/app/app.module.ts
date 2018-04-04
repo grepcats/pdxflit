@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { FundListComponent } from './fund-list/fund-list.component';
+import { FundDetailsComponent } from './fund-details/fund-details.component';
 
 export const firebaseConfig = {
   apiKey: MasterFireBase.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     ProjectListComponent,
-    FundListComponent
+    FundListComponent,
+    FundDetailsComponent
   ],
   imports: [
     BrowserModule,
