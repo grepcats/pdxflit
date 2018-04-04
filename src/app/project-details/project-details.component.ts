@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-fund-details',
-  templateUrl: './fund-details.component.html',
-  styleUrls: ['./fund-details.component.css'],
+  selector: 'app-project-details',
+  templateUrl: './project-details.component.html',
+  styleUrls: ['./project-details.component.css'],
   providers: [ProjectsService]
 })
-export class FundDetailsComponent implements OnInit {
+export class ProjectDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private location: Location, private projectsService: ProjectsService) { }
   projectId: string

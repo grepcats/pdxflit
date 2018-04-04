@@ -1,8 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { FundListComponent } from './fund-list/fund-list.component';
-import { FundDetailsComponent } from './fund-details/fund-details.component'
+import { ProjectListComponent } from './project-list/project-list.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component'
+import { ProjectNewComponent } from './project-new/project-new.component';
 
 const appRoutes: Routes = [
   {
@@ -10,12 +11,16 @@ const appRoutes: Routes = [
     component: WelcomeComponent
   },
   {
-    path: 'fund',
-    component: FundListComponent
+    path: 'projects',
+    component: ProjectListComponent
   },
   {
-    path: 'fund/:id',
-    component: FundDetailsComponent
+    path: 'projects/:id',
+    component: ProjectDetailsComponent
+  },
+  {
+    path: 'projects/new',
+    component: ProjectNewComponent
   }
 ];
 
