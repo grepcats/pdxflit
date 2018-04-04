@@ -1,3 +1,28 @@
-<p>
-  project-new works!
-</p>
+<div>
+  <div class="form-group">
+    <label>Name of your project</label>
+    <input #newName type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Describe project</label>
+    <textarea #newDescription type="text" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Starters/organizers for your project, separated by comma</label>
+    <input #newStarters type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Goal amount</label>
+    <input #newGoal type="number" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Plans for the money</label>
+    <textarea #newPlans class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Rewards/swag, separated by commas</label>
+    <input #newRewards class="form-control">
+  </div>
+  <button class="btn btn-default" (click)="addProject(newName.value, newStarters.value, newDescription.value, newGoal.value, newPlans.value, newRewards.value)">Submit</button>
+
+</div>

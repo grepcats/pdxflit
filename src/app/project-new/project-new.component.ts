@@ -15,4 +15,8 @@ export class ProjectNewComponent implements OnInit {
   ngOnInit() {
   }
 
+  addProject(name: string, starters: string, description: string, goal: string, plans: string, rewards: string) {
+    
+  }
+
 }
