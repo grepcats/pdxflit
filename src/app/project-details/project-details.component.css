@@ -1,7 +1,17 @@
 h1, h2, h3, h4, h5 {
   text-align: center;
+  color: white;
+
 }
 
+h1 {
+  font-family: 'Chicle', cursive;
+  color: white;
+}
 .donate {
   text-align: center;
+}
+
+.jumbotron {
+  background-color:#DD5A4B;
 }

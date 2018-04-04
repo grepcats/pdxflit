@@ -1,5 +1,5 @@
-
-<div *ngFor="let project of projects" (click)="goToDetailPage(project)" class="panel panel-default">
+<h1>Here are the list of projects!</h1>
+<div *ngFor="let project of projects" (click)="goToDetailPage(project)" class="panel panel-default" id="panel">
   <div class="panel-body">
     <h3>{{project.name}}</h3>
   </div>

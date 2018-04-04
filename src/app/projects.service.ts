@@ -26,4 +26,9 @@ export class ProjectsService {
     projectEntryInDatabase.update({raised: newAmount});
 
   }
+  updateVolunteers(project){
+    let projectEntryInDatabase = this.getProjectById(project.$key);
+    let newVolunteers = project.volunteers += 1;
+    projectEntryInDatabase.update({volunteers: newVolunteers});
+  }
 }

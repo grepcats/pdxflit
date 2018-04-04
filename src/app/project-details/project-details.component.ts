@@ -21,6 +21,10 @@ export class ProjectDetailsComponent implements OnInit {
     this.router.navigate(['donate', this.project.$key])
   }
 
+  updateVolunteers() {
+    this.projectsService.updateVolunteers(this.project);
+  }
+
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
     this.projectId = urlParameters['id'];
