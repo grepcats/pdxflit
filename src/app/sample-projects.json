@@ -1,0 +1,19 @@
+{ "projects": [{
+  "name": "Kickoff Party",
+  "starters": ["Katie Fujihara"],
+  "description": "It's a great party",
+  "goal": 100.00,
+  "plans": "Buy hella party supplies",
+  "rewards": ["$5: Social Media Shoutout", "$10: Sticker"],
+  "goalMet": false
+  },
+  {
+    "name": "First Meetup",
+    "starters": ["Katie Fujihara", "Masen Matthews"],
+    "description": "Speakers will talk about how great this organization is.",
+    "goal": 500.00,
+    "plans": "Buy pizza & beer, pay speakers, swag",
+    "rewards": ["$5: Social Media Shoutout", "$10: Sticker", "$50: Date with a speaker"],
+    "goalMet": false
+  }]
+}
