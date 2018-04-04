@@ -1,0 +1,13 @@
+<h1>Donate to {{project?.name}}</h1>
+<h3>We have raised ${{project?.raised}} of our ${{project?.goal}} goal!</h3>
+<form class="donateForm">
+  <h3>Amount to donate:</h3>
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input #newAmount type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+  </div>
+
+  <br>
+  <button type="button" name="button" class="btn btn-primary"
+  (click)="updateRaisedAmount(newAmount.value); newAmount.value=''">Donate!</button>
+</form>

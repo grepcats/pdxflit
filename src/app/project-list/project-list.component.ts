@@ -17,10 +17,8 @@ export class ProjectListComponent implements OnInit {
     this.router.navigate(['projects', clickedProject.$key])
   }
   ngOnInit() {
-    console.log(this.projects);
     this.projectsService.getProjects().subscribe(dataLastEmittedFromObserver => {
       this.projects = dataLastEmittedFromObserver;
-      console.log(this.projects);
     })
   }
 

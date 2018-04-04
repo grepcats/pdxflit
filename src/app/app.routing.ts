@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component'
 import { ProjectNewComponent } from './project-new/project-new.component';
+import { DonatePageComponent } from './donate-page/donate-page.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'new',
     component: ProjectNewComponent
+  },
+  {
+    path: 'donate/:id',
+    component: DonatePageComponent
   }
 ];
 

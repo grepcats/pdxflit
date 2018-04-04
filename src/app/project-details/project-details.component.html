@@ -1,6 +1,15 @@
-<h1>{{(project | async)?.name}}</h1>
-<h3>{{(project | async)?.description}}</h3>
-<h5 *ngFor="let starter of (project | async)?.starters">{{starter}}</h5>
-<h5>{{(project | async)?.goal}}</h5>
-<h5></h5>
-<h5></h5>
+<h1>{{project?.name}}</h1>
+<h3>{{project?.description}}</h3>
+<h2>Project Leaders</h2>
+<h5 *ngFor="let starter of project?.starters">{{starter}}</h5>
+<h2>Goal:</h2>
+<h5>${{project?.goal}}</h5>
+<h2>Amount Left:</h2>
+<h5>${{project?.goal-project?.raised}}
+<h2>Donation Swag!</h2>
+<h5 *ngFor="let reward of project?.rewards">{{reward}}</h5>
+
+<div class="donate">
+  <button type="button" name="button" class="btn btn-danger" (click)="clickDonate()">Donate</button>
+  <button type="button" name="button" class="btn btn-info">Volunteer</button>
+</div>

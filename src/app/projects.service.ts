@@ -19,4 +19,11 @@ export class ProjectsService {
   addProject(newProject: Project) {
     this.projects.push(newProject);
   }
+
+  updateRaisedAmount(project, amount: number) {
+    let projectEntryInDatabase = this.getProjectById(project.$key);
+    let newAmount = project.raised += amount;
+    projectEntryInDatabase.update({raised: newAmount});
+
+  }
 }
