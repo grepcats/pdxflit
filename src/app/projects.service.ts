@@ -42,4 +42,9 @@ export class ProjectsService {
                                   rewards: localUpdatedProject.rewards,
                                 })
   }
+
+  deleteProject(localProjectToDelete) {
+    let projectEntryInFirebase = this.getProjectById(localProjectToDelete.$key);
+    projectEntryInFirebase.remove();
+  }
 }

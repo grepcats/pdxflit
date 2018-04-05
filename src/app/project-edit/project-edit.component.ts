@@ -23,6 +23,13 @@ export class ProjectEditComponent implements OnInit {
     this.closeForm.emit(this.editClicked)
   }
 
+  beginDeletingProject(projectToDelete) {
+    this.projectsService.deleteProject(projectToDelete);
+    this.editClicked = false;
+    this.closeForm.emit(this.editClicked)
+    this.router.navigate(['projects']);
+  }
+
   clickEdit(value: boolean) {
     this.editClicked = value;
   }
@@ -36,6 +43,13 @@ export class ProjectEditComponent implements OnInit {
     })
 
   }
+
+  // cancel() {
+  //   this.editClicked = false;
+  //   this.closeForm.emit(this.editClicked);
+  //   this.router.navigate(['projects', this.projectId])
+  //
+  // }
 
   trackByIndex(index: number, obj: any): any {
     return index;
