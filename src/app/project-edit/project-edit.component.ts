@@ -37,7 +37,6 @@ export class ProjectEditComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location, private projectsService: ProjectsService, private router: Router) { }
 
   ngOnInit() {
-    console.log(this.router.url)
     this.route.params.forEach((urlParameters) => {
     this.projectId = urlParameters['id'];
     })

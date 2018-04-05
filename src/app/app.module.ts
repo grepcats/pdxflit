@@ -16,6 +16,7 @@ import { DonatePageComponent } from './donate-page/donate-page.component';
 import { ProjectEditComponent } from './project-edit/project-edit.component';
 import { AuthenticationService } from './authentication.service';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { ProfileComponent } from './profile/profile.component';
 
 export const firebaseConfig = {
   apiKey: MasterFireBase.apiKey,
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     ProjectDetailsComponent,
     ProjectNewComponent,
     DonatePageComponent,
-    ProjectEditComponent
+    ProjectEditComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

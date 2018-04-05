@@ -41,5 +41,6 @@ export class ProjectDetailsComponent implements OnInit {
     this.projectsService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver => {
       this.project = dataLastEmittedFromObserver;
     })
+
   }
 }

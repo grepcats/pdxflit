@@ -10,7 +10,7 @@
       <li><a routerLink="projects">Projects</a></li>
       <li><a routerLink="new">New Project</a></li>
       <li *ngIf="isLoggedIn">
-          <a>{{userName}}</a> <a (click)="logout()">Log out</a>
+          <a (click)="goToProfile(databaseUser)">{{userName}}</a> <a (click)="logout()">Log out</a>
       </li>
       <li *ngIf="!isLoggedIn">
         <a (click)="login()">Log In</a>

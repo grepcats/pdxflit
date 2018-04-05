@@ -6,6 +6,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { ProjectNewComponent } from './project-new/project-new.component';
 import { DonatePageComponent } from './donate-page/donate-page.component';
 import { ProjectEditComponent } from './project-edit/project-edit.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
   {
     path: 'projects/:id/edit',
     component: ProjectEditComponent
+  },
+  {
+    path: 'profile/:userId',
+    component: ProfileComponent
   }
 ];
 
