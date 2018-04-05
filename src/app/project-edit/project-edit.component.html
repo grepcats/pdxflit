@@ -1,0 +1,30 @@
+<h2>Edit Your Project</h2>
+<div class="form-group">
+  <label>Name</label>
+  <input [(ngModel)]="projectToEdit.name" class="form-control">
+</div>
+<div class="form-group">
+  <label>Description</label>
+  <textarea [(ngModel)]="projectToEdit.description" class="form-control"></textarea>
+</div>
+<div class="form-group">
+  <label>Starters</label>
+  <div *ngFor="let starter of projectToEdit.starters; let i = index; trackBy:trackByIndex">
+    <input [(ngModel)]="projectToEdit.starters[i]" class="form-control">
+  </div>
+</div>
+<div class="form-group">
+  <label>Goal</label>
+  <input type="number" [(ngModel)]="projectToEdit.goal" class="form-control">
+</div>
+<div class="form-group">
+  <label>Plans</label>
+  <input [(ngModel)]="projectToEdit.plans" class="form-control">
+</div>
+<div class="form-group">
+  <label>Rewards</label>
+  <div *ngFor="let reward of projectToEdit.rewards; let i = index; trackBy:trackByIndex">
+    <input [(ngModel)]="projectToEdit.rewards[i]" class="form-control">
+  </div>
+</div>
+<button class="btn btn-default" (click)="beginUpdatingProject(projectToEdit)">Update</button>

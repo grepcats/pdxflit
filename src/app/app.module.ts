@@ -13,6 +13,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ProjectNewComponent } from './project-new/project-new.component';
 import { DonatePageComponent } from './donate-page/donate-page.component';
+import { ProjectEditComponent } from './project-edit/project-edit.component';
 
 export const firebaseConfig = {
   apiKey: MasterFireBase.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     ProjectListComponent,
     ProjectDetailsComponent,
     ProjectNewComponent,
-    DonatePageComponent
+    DonatePageComponent,
+    ProjectEditComponent
   ],
   imports: [
     BrowserModule,

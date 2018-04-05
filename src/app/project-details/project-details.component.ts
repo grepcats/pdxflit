@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { ProjectsService } from '../projects.service'
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
@@ -16,9 +16,15 @@ export class ProjectDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location, private projectsService: ProjectsService, private router: Router) { }
   projectId: string
   project;
+  editClicked: boolean = false;
 
   clickDonate(){
     this.router.navigate(['donate', this.project.$key])
+  }
+
+  clickEdit() {
+    // this.router.navigate(['projects', this.project.$key, 'edit'])
+    this.editClicked = true;
   }
 
   updateVolunteers() {

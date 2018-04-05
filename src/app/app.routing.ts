@@ -5,6 +5,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component'
 import { ProjectNewComponent } from './project-new/project-new.component';
 import { DonatePageComponent } from './donate-page/donate-page.component';
+import { ProjectEditComponent } from './project-edit/project-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'donate/:id',
     component: DonatePageComponent
+  },
+  {
+    path: 'projects/:id/edit',
+    component: ProjectEditComponent
   }
 ];
 

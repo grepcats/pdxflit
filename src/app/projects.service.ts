@@ -31,4 +31,15 @@ export class ProjectsService {
     let newVolunteers = project.volunteers += 1;
     projectEntryInDatabase.update({volunteers: newVolunteers});
   }
+
+  updateProject(localUpdatedProject) {
+    let projectEntryInFirebase = this.getProjectById(localUpdatedProject.$key);
+    projectEntryInFirebase.update({name: localUpdatedProject.name,
+                                  description: localUpdatedProject.description,
+                                  starters: localUpdatedProject.starters,
+                                  goal: localUpdatedProject.goal,
+                                  plans: localUpdatedProject.plans,
+                                  rewards: localUpdatedProject.rewards,
+                                })
+  }
 }

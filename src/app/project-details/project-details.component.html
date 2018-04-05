@@ -24,4 +24,10 @@
     <h3 *ngIf="project?.raised <= project?.goal">We have raised ${{project?.raised}} of our ${{project?.goal}} goal!</h3>
     <h3 *ngIf="project?.raised > project?.goal">We have met our goal of ${{project?.goal}} and have surpassed it by ${{project?.raised-project?.goal}}!</h3>
   </div>
-</div>
+  <button (click)="clickEdit()" class="btn btn-default">Edit</button>
+  </div>
+  <div class="row">
+    <div *ngIf="editClicked">
+      <app-project-edit [projectToEdit] = "project" [editClicked] = "editClicked"></app-project-edit>
+    </div>
+  </div>
