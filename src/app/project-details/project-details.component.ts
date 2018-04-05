@@ -22,8 +22,11 @@ export class ProjectDetailsComponent implements OnInit {
     this.router.navigate(['donate', this.project.$key])
   }
 
+  closeForm(value: boolean) {
+    this.editClicked = false;
+  }
+
   clickEdit() {
-    // this.router.navigate(['projects', this.project.$key, 'edit'])
     this.editClicked = true;
   }
 

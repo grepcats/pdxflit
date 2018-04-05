@@ -28,6 +28,6 @@
   </div>
   <div class="row">
     <div *ngIf="editClicked">
-      <app-project-edit [projectToEdit] = "project" [editClicked] = "editClicked"></app-project-edit>
+      <app-project-edit [projectToEdit] = "project" [editClicked] = "editClicked" (closeForm)="closeForm($event)"></app-project-edit>
     </div>
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProjectsService } from '../projects.service'
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
@@ -14,10 +14,13 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class ProjectEditComponent implements OnInit {
   @Input() projectToEdit;
   @Input() editClicked: boolean;
+  @Output() closeForm = new EventEmitter;
   projectId: string;
 
   beginUpdatingProject(projectToUpdate) {
     this.projectsService.updateProject(projectToUpdate);
+    this.editClicked = false;
+    this.closeForm.emit(this.editClicked)
   }
 
   clickEdit(value: boolean) {
