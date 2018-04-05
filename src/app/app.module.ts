@@ -14,6 +14,8 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { ProjectNewComponent } from './project-new/project-new.component';
 import { DonatePageComponent } from './donate-page/donate-page.component';
 import { ProjectEditComponent } from './project-edit/project-edit.component';
+import { AuthenticationService } from './authentication.service';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 export const firebaseConfig = {
   apiKey: MasterFireBase.apiKey,
@@ -39,9 +41,10 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

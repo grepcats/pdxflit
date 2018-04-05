@@ -9,6 +9,12 @@
         <li><a href=""><img src="../assets/slack.png" alt="" id="slack"></a></li>
       <li><a routerLink="projects">Projects</a></li>
       <li><a routerLink="new">New Project</a></li>
+      <li *ngIf="isLoggedIn">
+          <a>{{userName}}</a> <a (click)="logout()">Log out</a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a (click)="login()">Log In</a>
+      </li>
     </ul>
   </div>
 </nav>
