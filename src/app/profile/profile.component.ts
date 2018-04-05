@@ -29,9 +29,6 @@ export class ProfileComponent implements OnInit {
     })
 
     this.userService.getUserByUID(this.userUID).subscribe(dataLastEmittedFromObserver => {
-    this.databaseUser = dataLastEmittedFromObserver[0];)
-
-
-
-
-  });
+      this.databaseUser = dataLastEmittedFromObserver[0];)
+    });
+  }
