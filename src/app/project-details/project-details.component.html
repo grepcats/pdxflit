@@ -18,10 +18,10 @@
   </div>
   <div class="col-md-6">
     <h3>Goal Date:</h3>
+    <h5>{{project?.date}}</h5>
     <h2>Goal:</h2>
     <h5>${{project?.goal}}</h5>
     <h3 *ngIf="project?.raised <= project?.goal">We have raised ${{project?.raised}} of our ${{project?.goal}} goal!</h3>
     <h3 *ngIf="project?.raised > project?.goal">We have met our goal of ${{project?.goal}} and have surpassed it by ${{project?.raised-project?.goal}}!</h3>
-    <h5>{{project?.date}}</h5>
   </div>
 </div>
