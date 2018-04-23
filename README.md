@@ -1,44 +1,57 @@
-# Pdxflit
+# PDXFLIT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+#### _A webapp for PDX Future Leaders in Tech. Demonstrates a mockup of project creation and the ability to donate to projects_
 
-## Development server
+## Installation
+If you'd like to install a version of this yourself rather than using the hosted site, please use the following instructions
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* clone repository: git clone https://github.com/grepcats/pdxflit
+* Set up a firebase account at https://firebase.google.com.
+  * Add project
+  * Add "api-keys.ts" file to the src/app directory
+  * Add the following to that file:
+  ```
+  export let masterFirebaseConfig = {
+    apiKey: "xxxx",
+    authDomain: "xxxx.firebaseapp.com",
+    databaseURL: "https://xxxx.firebaseio.com",
+    storageBucket: "xxxx.appspot.com",
+    messagingSenderId: "xxxx"
+  };
+  ```
+  Except use the credentials provided to you by firebase (find by "Add Firebase to your web app" on the firebase console)
+* install node. if you are on a mac, use `brew install node`. Otherwise, go to https://nodejs.org/en/download/ and download/install the appropriate installer.
+* in the project directory, type
+```
+npm init
+npm install (this installs the packages and dependencies listed in the package.json file)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Known Bugs
+No known bugs at this time.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Please report other bugs by submitting an issue on GitHub.
 
-## Running end-to-end tests
+## Support and Contact Details
+If there are any issues or questions, please contact me at kayla.renee at gmail dot com or create an issue in GitHub.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Technologies Used
+JavaScript, Node.js, npm, Bootstrap, Angular 5, Firebase
 
-## Further help
+## License
+MIT License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2018 Kayla Ondracek and Kaitlyn Fujihara
 
-## Specs
-* As a user, I want to click a project to see more details.
-* As a user, I'd like to know the details of a project before I decide whether to fund it. Including things like a name, the project starters/managers, a description, the amount of money the project is hoping to raise, what they'll do with the funds raised, and whether I get any cool swag or rewards for funding a project.
-* As a user, I want the option to post my own project or charitable act that seeks funding.
-* As a user, I want to click a button or fill out a form to fund a project.
-* As a user, I want to view a date that a project is scheduled to happen.
-* As a user, I want to volunteer my time on a project and have that date appear on my profile
-* As a user, I want to be able to filter projects as I browse them. Perhaps by the amount of funding they still require, or whether they're charitable acts, ideas for products, or other.
-* As an administrator, I want to add, update, or delete projects as necessary. (User authentication is not required).
-* As a user, as the site grows I want ideas, projects, and charitable acts to be separate types of objects, each residing on their own page. Things like charitable acts might have different types of properties/details than companies seeking startup funding, too.
-* As a user, I want to select a category to view a page containing all projects in that category.
-Further Exploration
-* As a user, I want to "favorite" certain projects, so I can refer back to them if I'd like.
-* As a user, I want to view my favorite projects on a special page in the site.
-* As an administrator, I want to be able to select certain projects to be "Featured". These will appear on a special page in the application.
-* As a user, I'd like to see a list of all donations I've made.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
